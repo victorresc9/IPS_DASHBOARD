@@ -53,7 +53,7 @@ img_sidebar[1].image(img,width=100)
 ############################################################################################################################################################################################################
 
 #################### BARRIL ####################
-metrics = pd.read_csv('Data\metrics.csv')
+metrics = pd.read_csv('Data/metrics.csv')
 metrics = metrics.loc[:, ~metrics.columns.str.contains('^Unnamed')]
 metrics.columns = [x.lower() for x in metrics.columns]
 metrics['fecha'] = pd.to_datetime(metrics['fecha'])
@@ -61,7 +61,7 @@ metrics['fecha'] = metrics['fecha'].dt.strftime('%d-%m-%Y')
 #metrics.index = metrics.fecha
 #st.write(metrics['fecha'])
 
-metrics_1 = pd.read_csv('Data\Barriles.csv')
+metrics_1 = pd.read_csv('Data/Barriles.csv')
 metrics_1 = metrics_1.loc[:, ~metrics_1.columns.str.contains('^Unnamed')]
 metrics_1.columns = [x.lower() for x in metrics_1.columns]
 metrics_1['fecha'] = pd.to_datetime(metrics_1['fecha'])
