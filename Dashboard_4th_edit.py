@@ -72,7 +72,7 @@ metrics_1['fecha'] = metrics_1['fecha'].dt.strftime('%d-%m-%Y')
 ############################################################################################################################################################################################################
 
 #################### PRODUCTION DATA ####################
-prod = pd.read_csv('Data\Production Data.csv')
+prod = pd.read_csv('Data/Production Data.csv')
 prod = prod.loc[:, ~prod.columns.str.contains('^Unnamed')]
 prod.columns = [x.lower() for x in prod.columns]
 prod['fecha'] = pd.to_datetime(prod['fecha'])
@@ -80,13 +80,13 @@ prod['lat'] = prod['lat'].astype(float)
 prod['lon'] = prod['lon'].astype(float)
 
 #################### PRESSURE DATA ####################
-press = pd.read_csv('Data\Pressure Data.csv')
+press = pd.read_csv('Data/Pressure Data.csv')
 press = press.loc[:, ~press.columns.str.contains('^Unnamed')]
 press.columns = [x.lower() for x in press.columns]
 press['fecha'] = pd.to_datetime(press['fecha'])
 
 #################### SALINITY DATA ####################
-salt = pd.read_csv('Data\Salinity.csv')
+salt = pd.read_csv('Data/Salinity.csv')
 salt = salt.loc[:, ~salt.columns.str.contains('^Unnamed')]
 salt.columns = [x.lower() for x in salt.columns]
 salt['fecha'] = pd.to_datetime(salt['fecha'])
@@ -101,7 +101,7 @@ salt = salt[salt.salinidad >= 1]
 salt = salt[salt.water_cut >= 1]
 
 #################### TOPS DEPTH ####################
-tops = pd.read_csv('Data\Layers.csv')
+tops = pd.read_csv('Data/Layers.csv')
 tops = tops.loc[:, ~tops.columns.str.contains('^Unnamed')]
 tops.columns = [x.lower() for x in tops.columns]
 
