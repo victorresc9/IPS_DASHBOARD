@@ -41,7 +41,7 @@ pd.options.mode.chained_assignment = None  # default='warn'
 
 #################### PAGE CONFIG ####################
 APP_TITLE = "IPS Dashboard"
-img=Image.open('Imagenes\IPS.png')
+img=Image.open('Imagenes/IPS.png')
 st.set_page_config(
     page_title = APP_TITLE,
     page_icon = img,
